@@ -1,0 +1,33 @@
+{
+  "name": "shopifyhelpers",
+  "title": "Shopify Helpers",
+  "version": "0.0.1",
+  "description": "Open JS library for Shopify Frontend",
+  "type": "module",
+  "main": "theme/assets/shopify-helpers.js",
+  "scripts": {
+    "tsbuild": "tsc",
+    "tsdev": "tsc -w",
+    "build": "esbuild ./app/index.js --bundle --outfile=./theme/assets/shopify-helpers.js",
+    "index": "tsc ./src/index.ts --outDir ./app",
+    "live": "cd ./theme && theme watch --allow-live"
+  },
+  "keywords": [
+    "shopify",
+    "shopify-dev",
+    "ecommerce",
+    "ajax",
+    "frontend"
+  ],
+  "author": {
+    "name": "Jose (Giot08) Torres",
+    "url": "https://github.com/Giot08"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "esbuild": "0.19.2"
+  }
+}
