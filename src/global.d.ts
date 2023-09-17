@@ -1,8 +1,5 @@
-// global.d.ts
 declare module "Shopify-Helpers" {
     class ShopifyHelpers {
-        metodoUno(): void;
-        metodoDos(): void;
         addToCart(id: number, quantity: number, properties: object | undefined, callback: Function): any;
         substractFromCart(id: number, quantity: number, callback: Function): any;
         removeFromCart(id: number, callback: Function): any;
@@ -22,12 +19,5 @@ declare module "Shopify-Helpers" {
         searchArticle(q: string, options: searchControls.ArticleSearchConfig, callback: Function): any;
         searchCollection(q: string, options: searchControls.CollectionSearchConfig, callback: Function): any;
     }
-
     export default ShopifyHelpers;
-}
-
-
-interface Window {
-    miFuncionPersonalizada: () => void;
-    miVariableGlobal: string;
 }
