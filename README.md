@@ -19,24 +19,36 @@ The bundle includes functionality for working with the Ajax API, covering:
 - Section Rendering API: Provides tools for get website sections with updated data.
 
 ## Getting started
-**Note:** The current version is in beta. While I continue to add more features to create a comprehensive bundle, using it may feel somewhat rudimentary.
-This library works in conjunction with the [Shopify AJAX API](https://shopify.dev/docs/api/ajax) Please refer to the Shopify AJAX API documentation if needed.
+This library works in conjunction with the [Shopify AJAX API](https://shopify.dev/docs/api/ajax). Please refer to the official documentation if needed.
 
-1. Copy the code from the latest release located in the [repository's releases section](https://github.com/Giot08/Shopify-Helpers/tree/main/releases)
-2. Create a new file in the `/theme/assets` folder of your store's file system.
-3. Add the newly created file to the `theme.liquid` file with a `<script>` element using the `defer` attribute to ensure the code is loaded in the background:
-     ```liquid
-     <!-- Is important to add defer attribute to surely load the code in the background. -->
-     <script src="{{ 'shopify-helpers.js' | asset_url }}" defer="defer"></script>
-    ```
-4. Use the DOMContentLoaded event to ensure that your code is linked to the previously added file correctly. You can use this approach in your layout, sections, or snippets files. Then, create a new object and specify your store's name in the instance:
-    ```javascript
-    addEventListener("DOMContentLoaded", (event) => {
-        //my-store-name.myshopify.com
-        const sh = new ShopifyHelpers("my-store-name");
-    });
-    ```
-    This ensures that your Shopify Helpers code is executed only after the HTML document has been completely loaded, avoiding any potential issues with script execution timing.
+### 1. Add the script to your store
+
+Choose one of the following methods:
+
+**Method A: Use CDN (recommended)**
+```html
+<script defer src="https://giot08.github.io/Shopify-Helpers/releases/sh_1.0.0.js"></script>
+```
+Or copy the code from the latest release in the [repository's releases section](https://github.com/Giot08/Shopify-Helpers/tree/main/releases).
+
+**Method B: Upload the file manually**
+1. Create a new file in your store's `/theme/assets` folder.
+2. Add the file to your `theme.liquid` with a `<script defer>` element:
+   ```liquid
+   <script src="{{ 'shopify-helpers.js' | asset_url }}" defer="defer"></script>
+   ```
+
+### 2. Initialize the library
+
+After adding the script using any of the previous methods, initialize the library in your code:
+
+```javascript
+addEventListener("DOMContentLoaded", (event) => {
+    //my-store-name.myshopify.com
+    const sh = new ShopifyHelpers("my-store-name");
+});
+```
+This ensures that your code runs only after the HTML document has fully loaded.
 
 ## Methods
 

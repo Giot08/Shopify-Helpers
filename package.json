@@ -1,7 +1,7 @@
 {
   "name": "shopifyhelpers",
   "title": "Shopify Helpers",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Open JS library for Shopify Frontend",
   "type": "module",
   "main": "theme/assets/shopify-helpers.js",
