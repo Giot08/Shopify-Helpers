@@ -27,7 +27,7 @@ Choose one of the following methods:
 
 **Method A: Use CDN (recommended)**
 ```html
-<script defer src="https://giot08.github.io/Shopify-Helpers/releases/sh_1.0.0.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/Giot08/Shopify-Helpers@main/releases/sh_1.0.0.js"></script>
 ```
 Or copy the code from the latest release in the [repository's releases section](https://github.com/Giot08/Shopify-Helpers/tree/main/releases).
 
